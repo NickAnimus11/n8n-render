@@ -22,4 +22,4 @@ services:
     disk:
       name: n8n-disk
       mountPath: /home/node/.n8n
-      sizeGB: 1
+      sizeGB: 5
