@@ -9,8 +9,6 @@ services:
     envVars:
       - key: DB_TYPE
         value: sqlite
-      - key: N8N_ENCRYPTION_KEY
-        value: Yt2$!nR8vuZ#qLc9^Gn@pX3mBdW%hMAz
       - key: WEBHOOK_URL
         value: https://n8n-7v4o.onrender.com
       - key: GENERIC_TIMEZONE
