@@ -2,7 +2,6 @@ services:
   - type: web
     name: n8n
     env: docker
-    region: oregon # optional (defaults to oregon)
     plan: standard # optional (defaults to starter)
     branch: main # optional (defaults to master)
     numInstances: 1
@@ -37,9 +36,9 @@ services:
       - key: N8N_ENCRYPTION_KEY
         value: YOUR_ENCRYPTION_KEY_HERE
       - key: GENERIC_TIMEZONE
-        value: America/Sao_Paulo
+        value: Europe/Athens
       - key: TZ
-        value: America/Sao_Paulo
+        value: Europe/Athens
       - key: N8N_LOG_LEVEL
         value: info
       - key: EXECUTIONS_DATA_PRUNE
