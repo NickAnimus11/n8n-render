@@ -8,33 +8,11 @@ services:
     healthCheckPath: /
     envVars:
       - key: DB_TYPE
-        value: postgresdb
-      - key: DB_POSTGRESDB_HOST
-        fromDatabase:
-          name: n8n-db
-          property: host
-      - key: DB_POSTGRESDB_DATABASE
-        fromDatabase:
-          name: n8n-db
-          property: database
-      - key: DB_POSTGRESDB_PORT
-        fromDatabase:
-          name: n8n-db
-          property: port
-      - key: DB_POSTGRESDB_USER
-        fromDatabase:
-          name: n8n-db
-          property: user
-      - key: DB_POSTGRESDB_PASSWORD
-        fromDatabase:
-          name: n8n-db
-          property: password
-      - key: DB_POSTGRESDB_SCHEMA
-        value: public
-      - key: WEBHOOK_URL
-        value: https://n8n-7v4o.onrender.com
+        value: sqlite
       - key: N8N_ENCRYPTION_KEY
         value: Yt2$!nR8vuZ#qLc9^Gn@pX3mBdW%hMAz
+      - key: WEBHOOK_URL
+        value: https://n8n-7v4o.onrender.com
       - key: GENERIC_TIMEZONE
         value: Europe/Athens
       - key: TZ
@@ -42,8 +20,8 @@ services:
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: false
       - key: EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS
-        value: true
+        value: false
     disk:
       name: n8n-disk
       mountPath: /home/node/.n8n
-      sizeGB: 5
+      sizeGB: 1
